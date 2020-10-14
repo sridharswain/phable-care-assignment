@@ -1,0 +1,4 @@
+Product,Vendor,Start Date,End Date,Unit Price
+Medicine A,Vendor A,2020-05-23T00:00:00,2020-06-30T00:00:00,10
+Medicine A,Vendor B,2020-05-12T00:00:00,2020-05-30T00:00:00,11
+Medicine B,Vendor C,2020-04-20T00:00:00,2020-05-28T00:00:00,99
