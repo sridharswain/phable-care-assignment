@@ -7,6 +7,7 @@ const RuleMapper = require('../mappers/RuleMapper');
 const Queues = require('../constants/Queues');
 
 const queue = require('../queue');
+const ruleservice = require('../service/rule/ruleservice');
 
 const router = express.Router();
 
@@ -25,6 +26,17 @@ function consumeRuleFile(req, res) {
     res.status(200).send();
 }
 
+function getRules(req, res) {
+    ruleservice.getRulesByStatus(req.params.status)
+        .then(result => {
+            res.status(200).json(result);
+        })
+        .catch(error => {
+            console.log(error);
+        })
+}
+
 router.post('/update-rules', FormFile.single("file"), consumeRuleFile);
+router.get("/get-rules/:status", getRules);
 
 module.exports = router;

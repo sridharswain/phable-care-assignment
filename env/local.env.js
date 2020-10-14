@@ -15,7 +15,7 @@ module.exports = {
             acquire: 30000,
             idle: 10000
         },
-        FORCE_DDL: true
+        FORCE_DDL: false
     },
     RABBIT_MQ: {
         HOST: "172.16.0.16",
